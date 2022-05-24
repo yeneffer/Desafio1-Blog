@@ -1,30 +1,34 @@
 body {
   margin: 0;
+  background-color: rgba(243, 245, 247, 1);
 }
 p {
   margin: 0;
 }
 .header {
+  display: flex;
   overflow: hidden;
   height: 210px;
-  padding: 2.5rem 16rem;
+  padding: 2.5rem 270px;
   background: linear-gradient(88.27deg, #574ae8 0%, #3ea1db 100%);
   color: white;
   font-family: "Lexend Deca", sans-serif;
-
-  /* font-family: "Inter", sans-serif; */
+  align-items: center;
+}
+.conteudoHeader {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
 }
 
-.textDiv {
+.textHeader {
   display: flex;
   justify-content: space-between;
   font-size: 1.5rem;
   line-height: 1.75rem;
   margin-bottom: 4rem;
-}
-
-.blog {
-  /* font-family: "Lexend Deca", sans-serif; */
+  align-self: stretch;
 }
 
 .searchBar {
@@ -47,4 +51,81 @@ p {
 
 .searchBar::placeholder {
   color: white;
+}
+.todosPosts {
+  display: flex;
+  flex-direction: column;
+  row-gap: 50px;
+  width: calc(100% - 540px);
+  align-items: center;
+  padding: 0 270px;
+  font-family: "Lexend Deca";
+  font-style: normal;
+  font-weight: 400;
+  margin-bottom: 100px;
+  margin-top: 100px;
+}
+.posts {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  width: calc(100% - 50px);
+  align-content: center;
+  border-radius: 5px;
+  padding: 25px;
+  box-shadow: 0px 0px 10px 0px rgba(19, 19, 31, 0.05);
+}
+.datasPost {
+  font-size: 16px;
+  line-height: 20px;
+  color: rgba(113, 113, 113, 1);
+}
+
+.tituloPost {
+  font-size: 26px;
+  line-height: 32px;
+  margin-bottom: 8px;
+}
+
+.conteudoPost {
+  font-size: 18px;
+  line-height: 32px;
+  color: rgba(113, 113, 113, 1);
+}
+.dataEFigura {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 22px;
+}
+.coracao {
+  fill: #574ae8;
+  cursor: pointer;
+}
+.coracao:hover {
+  fill: red;
+}
+
+@media screen and (max-width: 800px) {
+  .header {
+    padding: 0 20px;
+  }
+  .todosPosts {
+    padding: 0 20px;
+    width: calc(100% - 40px);
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+}
+
+@media screen and (min-width: 800px) and (max-width: 1280px) {
+  .header {
+    padding: 0 100px;
+  }
+  .todosPosts {
+    padding: 0 100px;
+    width: calc(100% - 200px);
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
 }
